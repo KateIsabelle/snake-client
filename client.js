@@ -31,12 +31,15 @@ const connect = function () {
   });
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
+    conn.write("Name: KID");
+    conn.write("Move: up");
+    //setInterval(() => conn.write("Move: up"), 100);
   });
-  conn.write("Name: KID");
+
   return conn;
 }
 
-//connect();
+
 
 module.exports = {
   connect
