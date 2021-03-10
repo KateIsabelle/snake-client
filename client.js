@@ -1,21 +1,3 @@
-// const net = require('net');
-// const stdin = process.stdin;
-// stdin.setEncoding('utf8');
-
-// const client = net.createConnection({
-//   host: '135.23.222.131',
-//   port: 3001
-// });
-
-// client.setEncoding('utf8');
-// client.on("data", (data) => {
-//   console.log("data came back from server...");
-//   console.log(data);
-// })
-// stdin.on('data', (input) => {
-//   client.write(input);
-// })
-
 const net = require("net");
 
 //Establishes connection with the game server
@@ -32,7 +14,6 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: KID");
-    conn.write("Move: up");
     //setInterval(() => conn.write("Move: up"), 100);
   });
 
