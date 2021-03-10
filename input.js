@@ -13,6 +13,12 @@
   connection.write("Move: right");
 } else if (key === 'a') {
   connection.write("Move: left");
+} else if (key === 'g') {
+  connection.write("Say: gotcha");
+} else if (key === 'b') {
+  connection.write("Say: makin bacon pancakes")
+} else if (key === 'h') {
+  connection.write("Say: oh, hi there");
 }
 };
 
